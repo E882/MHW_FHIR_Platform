@@ -1,8 +1,8 @@
 version: "3"
 services:
-  hapi-fhir-jpaserver-start:
+  hapi-fhir-server:
     build: .
-    container_name: hapi-fhir-jpaserver-start
+    container_name: hapi-fhir-server
     restart: on-failure
     ports:
       - "8080:8080"
@@ -27,5 +27,17 @@ services:
       PGADMIN_DEFAULT_PASSWORD: "admin"
     ports:
       - "5050:80"
+  nifi:
+    image: apache/nifi:latest
+    container_name: nifi
+    restart: always
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: "admin"
+      SINGLE_USER_CREDENTIALS_PASSWORD: "1qaz2wsx3edc4rfv"
+      NIFI_WEB_HTTPS_HOST: "172.25.2.141"
+      NIFI_WEB_HTTPS_PORT: "8443"
+      NIFI_WEB_PROXY_HOST: "172.25.2.141:8443"
+    ports:
+      - "8443:8443"
 volumes:
   hapi-fhir-postgres:
