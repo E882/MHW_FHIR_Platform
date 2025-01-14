@@ -86,11 +86,17 @@ hapi:
     ### enables the server host custom content. If e.g. the value ./configs/app is supplied then the content
     ### will be served under /web/app
     #app_content_path: ./configs/app
+    
     ### enable to set the Server URL
     #    server_address: http://hapi.fhir.org/baseR4
     #    defer_indexing_for_codesystems_of_size: 101
     #    install_transitive_ig_dependencies: true
-    #implementationguides:
+    
+    implementationguides:
+      twcore:
+        name: tw.gov.mohw.twcore
+        version: 0.3.2
+        packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.2/package.tgz'
     ###    example from registry (packages.fhir.org)
     #  swiss:
     #    name: swiss.mednet.fhir
@@ -105,6 +111,10 @@ hapi:
     #    supported_resource_types:
     #      - Patient
     #      - Observation
+      
+
+        
+    
     ##################################################
     # Allowed Bundle Types for persistence (defaults are: COLLECTION,DOCUMENT,MESSAGE)
     ##################################################
@@ -115,6 +125,7 @@ hapi:
     #    allow_multiple_delete: true
     #    allow_override_default_search_params: true
     #    auto_create_placeholder_reference_targets: false
+    
     ### tells the server to automatically append the current version of the target resource to references at these paths
     #    auto_version_reference_at_paths: Device.patient, Device.location, Device.parent, DeviceMetric.parent, DeviceMetric.source, Observation.device, Observation.subject
     #    ips_enabled: false
@@ -126,6 +137,7 @@ hapi:
     #    enable_index_missing_fields: false
     #    enable_index_of_type: true
     #    enable_index_contained_resource: false
+    
     ###  !!Extended Lucene/Elasticsearch Indexing is still a experimental feature, expect some features (e.g. _total=accurate) to not work as expected!!
     ###  more information here: https://hapifhir.io/hapi-fhir/docs/server_jpa/elastic.html
     advanced_lucene_indexing: false
@@ -204,7 +216,7 @@ hapi:
     tester:
       home:
         name: Local Tester
-        server_address: 'http://172.25.2.141:8080/fhir'
+        server_address: 'http://172.25.2.141/fhir'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
       global:
@@ -212,9 +224,9 @@ hapi:
         server_address: "http://hapi.fhir.org/baseR4"
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
-    #    validation:
-    #      requests_enabled: true
-    #      responses_enabled: true
+    validation:
+          requests_enabled: true
+          responses_enabled: fasle
     #    binary_storage_enabled: true
     inline_resource_storage_below_size: 4000
 #    bulk_export_enabled: true

@@ -19,6 +19,8 @@ sudo git clone https://github.com/E882/MHW_FHIR_Platform.git
 sudo docker volume rm cshhapifhir_hapi-fhir-postgres
 sudo docker volume prune
 
+'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
+
 
 cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ sudo gpasswd -a cshe882 docker
 Adding user cshe882 to group docker
