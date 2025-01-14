@@ -18,3 +18,14 @@ sudo git clone https://github.com/E882/MHW_FHIR_Platform.git
 
 sudo docker volume rm cshhapifhir_hapi-fhir-postgres
 sudo docker volume prune
+
+
+cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ sudo gpasswd -a cshe882 docker
+Adding user cshe882 to group docker
+cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ sudo systemctl restart docker
+cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ ls -l /var/run/docker.sock
+srw-rw---- 1 root docker 0 Jan 14 01:42 /var/run/docker.sock
+cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ sudo chmod a+rw /var/run/docker.sock
+cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ ls -l /var/run/docker.sock
+srw-rw-rw- 1 root docker 0 Jan 14 01:42 /var/run/docker.sock
+cshe882@cshe882-k8s:~/MHW_FHIR_Platform/CSHHAPIFHIR$ 
