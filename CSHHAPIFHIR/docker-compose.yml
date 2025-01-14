@@ -34,7 +34,6 @@ services:
     environment:
       SINGLE_USER_CREDENTIALS_USERNAME: "admin"
       SINGLE_USER_CREDENTIALS_PASSWORD: "1qaz2wsx3edc4rfv"
-      NIFI_WEB_HTTPS_HOST: "172.25.2.141"
       NIFI_WEB_HTTPS_PORT: "8443"
       NIFI_WEB_PROXY_HOST: "172.25.2.141:8443"
     ports:
