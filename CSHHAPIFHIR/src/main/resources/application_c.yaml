@@ -91,17 +91,13 @@ hapi:
     server_address: http://172.25.2.141:8080/fhir
     defer_indexing_for_codesystems_of_size: 101
     install_transitive_ig_dependencies: true
-    implementationguides:
-      twcore:
-        #name: tw.gov.mohw.twcore
-        #version: 0.3.1
-        #reloadExisting: false
-        #installMode: STORE_AND_INSTALL
-        #packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
-        twcore_0_3_2:
-          packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.2/package.tgz'
-          name: tw.gov.mohw.twcore
-          version: 0.3.2
+    #implementationguides:
+    #  twcore:
+    #    name: tw.gov.mohw.twcore
+    #    version: 0.3.1
+    #    reloadExisting: false
+    #    installMode: STORE_AND_INSTALL
+    #    packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
     ###    example from registry (packages.fhir.org)
     #  swiss:
     #    name: swiss.mednet.fhir

@@ -93,11 +93,15 @@ hapi:
     install_transitive_ig_dependencies: true
     implementationguides:
       twcore:
-        name: tw.gov.mohw.twcore
-        version: 0.3.1
-        reloadExisting: false
-        installMode: STORE_AND_INSTALL
-        packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
+        #name: tw.gov.mohw.twcore
+        #version: 0.3.1
+        #reloadExisting: false
+        #installMode: STORE_AND_INSTALL
+        #packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
+        twcore_0_3_2:
+          packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.2/package.tgz'
+          name: tw.gov.mohw.twcore
+          version: 0.3.2
     ###    example from registry (packages.fhir.org)
     #  swiss:
     #    name: swiss.mednet.fhir
