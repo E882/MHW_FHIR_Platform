@@ -71,7 +71,7 @@ hapi:
     ### This is the FHIR version. Choose between, DSTU2, DSTU3, R4 or R5
     fhir_version: R4
     ### Flag is false by default. This flag enables runtime installation of IG's.
-    ig_runtime_upload_enabled: false
+    ig_runtime_upload_enabled: true
     ### This flag when enabled to true, will avail evaluate measure operations from CR Module.
 
     ### enable to use the ApacheProxyAddressStrategy which uses X-Forwarded-* headers
@@ -95,6 +95,8 @@ hapi:
       twcore:
         name: tw.gov.mohw.twcore
         version: 0.3.1
+        reloadExisting: false
+        installMode: STORE_AND_INSTALL
         packageUrl: 'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
     ###    example from registry (packages.fhir.org)
     #  swiss:
@@ -128,7 +130,7 @@ hapi:
     ### tells the server to automatically append the current version of the target resource to references at these paths
     #    auto_version_reference_at_paths: Device.patient, Device.location, Device.parent, DeviceMetric.parent, DeviceMetric.source, Observation.device, Observation.subject
     #    ips_enabled: false
-    #    default_encoding: JSON
+    default_encoding: JSON
     #    default_pretty_print: true
     #    default_page_size: 20
     #    delete_expunge_enabled: true
