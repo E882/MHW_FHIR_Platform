@@ -1,0 +1,1 @@
+sudo docker run -d -v $PWD/localhost-key.pem:/etc/mkcert/localhost-key.pem -v $PWD/localhost.pem:/etc/mkcert/localhost.pem -v $PWD/nginx.conf:/etc/nginx/conf.d/default.conf -p 443:443 nginx:alpine
