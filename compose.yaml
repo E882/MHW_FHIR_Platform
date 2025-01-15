@@ -1,6 +1,6 @@
 services:
   fhir-server:
-    build: cshe882/csh-fhir-server
+    image: cshe882/csh-fhir-server
     container_name: fhir-server
     restart: always
     ports:
