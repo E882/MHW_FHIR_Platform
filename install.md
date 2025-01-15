@@ -17,7 +17,9 @@ hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
 sudo git clone https://github.com/E882/MHW_FHIR_Platform.git
 
 sudo docker volume rm cshhapifhir_hapi-fhir-postgres
+sudo docker volume rm csh_hapi-fhir-postgres
 sudo docker volume prune
+sudo docker system prune
 
 'https://twcore.mohw.gov.tw/ig/twcore/0.3.1/package.tgz'
 

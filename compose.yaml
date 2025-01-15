@@ -1,0 +1,30 @@
+services:
+  fhir-server:
+    build: cshe882/csh-fhir-server
+    container_name: fhir-server
+    restart: always
+    ports:
+      - "8080:8080"
+  fhir-postgres:
+    image: cshe882/csh-fhir-postgres
+    container_name: fhir-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "hapi"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
+    ports:
+      - "5432:5432"
+    volumes:
+      - hapi-fhir-postgres:/var/lib/postgresql/data
+  pgadmin:
+    image: cshe882/csh-fhir-pgadmin
+    container_name: fhir-pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "cshe882@csh.org.tw"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "5050:80"
+volumes:
+  hapi-fhir-postgres:
