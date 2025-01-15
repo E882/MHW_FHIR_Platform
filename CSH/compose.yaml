@@ -26,16 +26,5 @@ services:
       PGADMIN_DEFAULT_PASSWORD: "admin"
     ports:
       - "5050:80"
-  nifi:
-    image: apache/nifi:latest
-    container_name: nifi
-    restart: always
-    environment:
-      SINGLE_USER_CREDENTIALS_USERNAME: "admin"
-      SINGLE_USER_CREDENTIALS_PASSWORD: "1qaz2wsx3edc4rfv"
-      NIFI_WEB_HTTPS_PORT: "8443"
-      NIFI_WEB_PROXY_HOST: "192.168.0.65:8443"
-    ports:
-      - "8443:8443"
 volumes:
   hapi-fhir-postgres:

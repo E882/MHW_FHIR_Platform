@@ -88,7 +88,7 @@ hapi:
     #app_content_path: ./configs/app
     
     ### enable to set the Server URL
-    server_address: http://192.168.0.65:8080/fhir
+    server_address: http://172.25.2.141:8080/fhir
     defer_indexing_for_codesystems_of_size: 101
     install_transitive_ig_dependencies: true
     implementationguides:
@@ -221,7 +221,7 @@ hapi:
     tester:
       home:
         name: Local Tester
-        server_address: 'http://192.168.0.65:8080/fhir'
+        server_address: 'http://172.25.2.141:8080/fhir'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
       global:
@@ -231,7 +231,7 @@ hapi:
         fhir_version: R4
     validation:
       requests_enabled: 'true'
-      responses_enabled: 'true'
+    #  responses_enabled: 'true'
     #    binary_storage_enabled: true
     inline_resource_storage_below_size: 4000
 #    bulk_export_enabled: true
