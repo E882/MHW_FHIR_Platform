@@ -77,3 +77,7 @@ hapi-fhir-server    |   ... 89 common frames omitted
 
 
 [HealthResearch].[dbo].[CancerCaseMt]
+
+docker exec -it registry /bin/sh
+
+docker cp daemon.json 5d4687aaac5e:/etc/docker/
