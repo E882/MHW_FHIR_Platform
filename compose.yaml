@@ -17,9 +17,9 @@ services:
       - "5432:5432"
     volumes:
       - hapi-fhir-postgres:/var/lib/postgresql/data
-  pgadmin:
+  postgresql-pgadmin:
     image: cshe882/csh-fhir-pgadmin
-    container_name: fhir-pgadmin
+    container_name: postgresql-pgadmin
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: "cshe882@csh.org.tw"
