@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: csh-fhir-server
+  labels:
+    app: fhir-server
+spec:
+  containers:
+  - name: fhir-server
+    image: cshe882/csh-fhir-server:latest
+    ports:
+    - containerPort: 8080
+  restartPolicy: Never

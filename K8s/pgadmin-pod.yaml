@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: csh-fhir-pgadmin
+  labels:
+    app: fhir-pgadmin
+spec:
+  containers:
+  - name: fhir-pgadmin
+    image: cshe882/csh-fhir-pgadmin:latest
+    ports:
+    - containerPort: 5050
+  restartPolicy: Always
