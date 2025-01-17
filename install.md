@@ -81,3 +81,7 @@ hapi-fhir-server    |   ... 89 common frames omitted
 docker exec -it registry /bin/sh
 
 docker cp daemon.json 5d4687aaac5e:/etc/docker/
+
+sudo systemctl restart docker
+
+sudo systemctl stop docker

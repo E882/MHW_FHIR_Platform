@@ -3,3 +3,5 @@
     "group": "dockerroot",
     "insecure-registries": ["x.x.x.x:5000"]
 }
+
+path:/etc/docker/
