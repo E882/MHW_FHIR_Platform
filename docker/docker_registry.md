@@ -4,3 +4,12 @@
 
 /etc/default/docker
 sudo systemctl stop docker and sudo systemctl start docker.
+
+
+
+
+/etc/docker/daemon.json
+{ "insecure-registries":["host:port"] } 
+
+systemctl daemon-reload
+systemctl restart docker
